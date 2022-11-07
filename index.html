@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- js changing html value -->
+    <p id="demo">javascript</p>
+    <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello Javascript!"'>click me</button>
+
+ <!-- JS changing HTML style -->
+    <p id="demo1">JS can change the style of an HTML element</p>
+    <button type="button" onclick="document.getElementById('demo1').style.fontStyle='italic'">Click Me!</button>
+    <!-- this above can also be used to change so many HTML elements via styling -->
+
+    <!-- linked JS externally -->
+    <h4>Demo External JS</h4>
+    <p id="demo2">First Paragraph</p>
+    <button type="button" onclick="linked(id)">Try it</button>
+
+<!-- JS Statements -->
+<h4>JS Statements</h4>
+<p id="demo3"></p>
+
+<!-- code blocks {} in JS S tatements -->
+<button type="button" onmouseover="displayGreetings()">Click now</button>
+<p id="hello"></p>
+<p id="dolly"></p>
+
+<!-- JS HTML Events -->
+<button onclick="this.innerHTML = Date()">The time is?</button>
+<br>
+<br>
+<button onclick="displayDate()">The time is?</button>
+<p id="demo4"></p>
+
+<!-- Replacing String Method-->
+<button onclick="replace()">Change</button>
+<p id="demo5">Please visit Microsoft.</p>
+<p id="demo6"></p>
+<!-- JS Comarisons -->
+<p>Input Your age</p>
+<input id="age" value="18">
+<button onclick="myComparison()">Check</button>
+<p id="dem"></p>
+<p id="if">Good Evening</p>
+<p id="else">Good Morning</p>
+<p id="else if">Good Morning</p>
+<!-- JS vVoid() Operator -->
+<p>
+    <a href="javascript:void(document.body.style.backgroundColor='pink');">Click and change background color</a>
+</p>
+<h4>JS 'try catch'</h4>
+<p>please input a no. btw 5 and 10</p>
+<input id="kash" type="text" >
+<button type="button" onclick="tryCatch()">Test input</button>
+<p id="ps2"></p>
+<script>
+function tryCatch(){
+const feedback = document.getElementById("ps2");
+feedback.innerHTML = "";
+let i = document.getElementById("kash").value;
+try {
+if(i == "") throw "empty";
+if(isNaN(i)) throw "not a number";
+i = Number(i);
+if(i < 5) throw "too low";
+if(i > 10) throw "too high";
+}
+catch(err){
+feedback.innerHTML = "Input is " + err;
+}
+finally{
+     document.getElementById("kash").value;
+}
+}
+</script>
+
+
+    <script src="index.js"></script>
+    
+</body>
+</html>
